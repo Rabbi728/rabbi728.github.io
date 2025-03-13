@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-gray-800 p-4 shadow-md z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">DevOps Portfolio</h1>
+            <ul class="flex gap-6">
+                <li><a href="#home" class="hover:text-gray-400">Home</a></li>
+                <li><a href="#skills" class="hover:text-gray-400">Skills</a></li>
+                <li><a href="#experience" class="hover:text-gray-400">Experience</a></li>
+                <li><a href="#projects" class="hover:text-gray-400">Projects</a></li>
+                <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Optimized Hero Banner -->
+    <section id="home" class="h-[80vh] flex items-center px-6 bg-gray-800">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between w-full max-w-7xl">
+            <!-- Profile Image -->
+            <div class="w-56 h-56 md:w-64 md:h-64 flex-shrink-0">
+                <img src="hero.png" alt="Profile Photo"
+                    class="w-full h-full rounded-full border-4 border-blue-500 shadow-lg">
+            </div>
+            <!-- Text Section -->
+            <div class="flex-1 md:pl-10 text-center md:text-left">
+                <h2 class="text-6xl font-extrabold">Rabbi Ahamed</h2>
+                <p class="text-2xl text-blue-400 font-semibold mt-2">DevOps Engineer | Cloud Architect</p>
+                <p class="mt-4 text-gray-300 text-xl">Building scalable cloud infrastructure, automating deployments,
+                    and optimizing workflows.</p>
+                <!-- Email & Phone -->
+                <p class="mt-4 text-lg">
+                    📧 <a href="mailto:rabbiahamed0728@gmail.com" class="text-blue-400 hover:underline">rabbiahamed0728@gmail.com</a><br>
+                    📞 <a href="tel:+8801705767660" class="text-blue-400 hover:underline">01705767660</a>
+                </p>
+                <a href="#projects"
+                    class="mt-6 inline-block px-8 py-4 bg-blue-500 text-xl font-semibold rounded-lg hover:bg-blue-600">
+                    View My Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="p-10 bg-gray-900">
+        <h2 class="text-3xl font-bold text-center mb-8">Technical Skills</h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Docker</h3>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Kubernetes</h3>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Terraform</h3>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">AWS</h3>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Jenkins</h3>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Ansible</h3>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Linux</h3>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Python</h3>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Git</h3>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Prometheus</h3>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Grafana</h3>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold">Github Actions</h3>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="p-10 bg-gray-800 text-white">
+        <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
+        <div class="max-w-4xl mx-auto">
+            <div class="p-6 bg-gray-700 rounded-lg mb-6">
+                <h3 class="text-xl font-semibold">DevOps Engineer - XYZ Company</h3>
+                <p class="text-gray-300">2021 - Present</p>
+                <ul class="mt-2 text-gray-400 list-disc list-inside">
+                    <li>Implemented CI/CD pipelines for seamless deployment.</li>
+                    <li>Managed cloud infrastructure using AWS & Terraform.</li>
+                    <li>Automated system monitoring with Prometheus & Grafana.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="p-10 bg-gray-100 text-gray-900">
+        <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div class="p-6 bg-white shadow-lg rounded-lg">
+                <h3 class="text-xl font-semibold">CI/CD Pipeline</h3>
+                <p class="mt-2 text-gray-600">Automated CI/CD using Jenkins & Kubernetes.</p>
+                <span class="mt-4 inline-block bg-gray-800 text-white text-sm px-3 py-1 rounded">Jenkins, Docker,
+                    K8s</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-10 bg-gray-800 text-white text-center">
+        <h2 class="text-3xl font-bold">Contact Me</h2>
+        <p class="mt-4">Feel free to reach out for DevOps projects.</p>
+        <div class="mt-6 flex justify-center gap-4">
+            <a href="https://facebook.com/RabbiAhamed.728" target="_blank" class="text-blue-500 hover:text-blue-600"
+                aria-label="Facebook">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://github.com/rabbi728" target="_blank" class="text-gray-400 hover:text-gray-500"
+                aria-label="GitHub">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="https://linkedin.com/in/rabbi728" target="_blank" class="text-blue-500 hover:text-blue-600"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://wa.me/01685145215" target="_blank" class="text-green-500 hover:text-green-600"
+                aria-label="WhatsApp">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="p-6 text-center bg-gray-900">
+        <p>© 2025 DevOps Portfolio. Created by Rabbi Ahamed.</p>
+    </footer>
+
+</body>
+
+</html>
