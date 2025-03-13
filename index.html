@@ -5,10 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevOps Portfolio</title>
+    <meta name="description" content="Rabbi Ahamed's DevOps Portfolio showcasing skills, experience, and projects in cloud infrastructure and automation.">
+    <meta name="keywords" content="DevOps, Cloud Architect, CI/CD, Automation, AWS, Kubernetes, Docker">
+    <meta name="author" content="Rabbi Ahamed">
+    <meta property="og:title" content="DevOps Portfolio">
+    <meta property="og:description" content="Rabbi Ahamed's DevOps Portfolio showcasing skills, experience, and projects in cloud infrastructure and automation.">
+    <meta property="og:image" content="https://rabbi728.github.io/hero.png">
+    <meta property="og:url" content="https://rabbi728.github.io">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DevOps Portfolio">
+    <meta name="twitter:description" content="Rabbi Ahamed's DevOps Portfolio showcasing skills, experience, and projects in cloud infrastructure and automation.">
+    <meta name="twitter:image" content="https://rabbi728.github.io/hero.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="hero.png" type="image/x-icon">
     <style>
         html {
             scroll-behavior: smooth;
@@ -18,11 +30,13 @@
 
 <body class="bg-gray-900 text-white">
 
-    <!-- Navbar -->
     <nav class="fixed top-0 w-full bg-gray-800 p-4 shadow-md z-50">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-xl font-bold">DevOps Portfolio</h1>
-            <ul class="flex gap-6">
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <ul id="menu" class="hidden md:flex gap-6">
                 <li><a href="#home" class="hover:text-gray-400">Home</a></li>
                 <li><a href="#skills" class="hover:text-gray-400">Skills</a></li>
                 <li><a href="#experience" class="hover:text-gray-400">Experience</a></li>
@@ -32,27 +46,38 @@
         </div>
     </nav>
 
-    <!-- Optimized Hero Banner -->
-    <section id="home" class="h-[80vh] flex items-center px-6 bg-gray-800">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 flex flex-col items-center justify-center transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <button id="close-menu" class="absolute top-6 right-6 text-white text-3xl focus:outline-none z-50">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="text-center text-xl space-y-6">
+            <li><a href="#home" class="hover:text-gray-400">Home</a></li>
+            <li><a href="#skills" class="hover:text-gray-400">Skills</a></li>
+            <li><a href="#experience" class="hover:text-gray-400">Experience</a></li>
+            <li><a href="#projects" class="hover:text-gray-400">Projects</a></li>
+            <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="home" class="min-h-screen flex items-center px-6 bg-gray-800">
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between w-full max-w-7xl">
             <!-- Profile Image -->
             <div class="w-56 h-56 md:w-64 md:h-64 flex-shrink-0">
-                <img src="hero.png" alt="Profile Photo"
-                    class="w-full h-full rounded-full border-4 border-blue-500 shadow-lg">
+                <img src="hero.png" alt="Profile Photo" class="w-full h-full rounded-full border-4 border-blue-500 shadow-lg">
             </div>
             <!-- Text Section -->
-            <div class="flex-1 md:pl-10 text-center md:text-left">
-                <h2 class="text-6xl font-extrabold">Rabbi Ahamed</h2>
-                <p class="text-2xl text-blue-400 font-semibold mt-2">DevOps Engineer | Cloud Architect</p>
-                <p class="mt-4 text-gray-300 text-xl">Building scalable cloud infrastructure, automating deployments,
-                    and optimizing workflows.</p>
+            <div class="flex-1 md:pl-10 text-center md:text-left mt-8 md:mt-0">
+                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight">Rabbi Ahamed</h2>
+                <p class="text-lg md:text-2xl text-blue-400 font-semibold mt-2">DevOps Engineer | Cloud Architect</p>
+                <p class="mt-4 text-sm md:text-xl text-gray-300">Building scalable cloud infrastructure, automating deployments, and optimizing workflows.</p>
                 <!-- Email & Phone -->
-                <p class="mt-4 text-lg">
+                <p class="mt-4 text-sm md:text-lg">
                     📧 <a href="mailto:rabbiahamed0728@gmail.com" class="text-blue-400 hover:underline">rabbiahamed0728@gmail.com</a><br>
                     📞 <a href="tel:+8801705767660" class="text-blue-400 hover:underline">01705767660</a>
                 </p>
-                <a href="#projects"
-                    class="mt-6 inline-block px-8 py-4 bg-blue-500 text-xl font-semibold rounded-lg hover:bg-blue-600">
+                <a href="#projects" class="mt-6 inline-block px-8 py-4 bg-blue-500 text-lg md:text-xl font-semibold rounded-lg hover:bg-blue-600">
                     View My Work
                 </a>
             </div>
@@ -160,6 +185,30 @@
         <p>© 2025 DevOps Portfolio. Created by Rabbi Ahamed.</p>
     </footer>
 
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('-translate-x-full');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        closeMenu.addEventListener('click', toggleMenu);
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                mobileMenu.classList.add('-translate-x-full');
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                mobileMenu.classList.add('-translate-x-full');
+            }
+        });
+    </script>
 </body>
 
 </html>
